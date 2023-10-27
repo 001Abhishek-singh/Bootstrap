@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Learning</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <style>
+        #background{
+            background-color: red;
+            height: 400px ;
+        }
+
+        #newback{
+            background-color: blueviolet;
+            height: 300px;
+        }
+
+        #back{
+            background-color: aqua;
+            height: 350px;
+        }
+
+        #forcontainer{
+            background-color: plum;
+            height: 300px;
+        }
+        #forrow{
+            background-color: aquamarine;
+            height: 100px;
+        }
+        #forcol{
+            background-color:brown;
+            height: 100px;
+        }
+        #newrow{
+            background-color: cadetblue;
+            height: 50px;
+        }
+        #newcol{
+            background-color: wheat;
+            height: 25px;
+        }
+        #myimport{
+            background-color: blue;
+            height: 400px;
+        }
+        #myrow{
+            background-color: yellowgreen;
+            height: 200px;
+        }
+        #mycol{
+            background-color:coral;
+            height: 100px;
+        }
+        #fornewcol{
+            background-color: coral;
+            height: 100px;
+        }
+    
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid" id="background">
+        <!-- this will take 100% width of the containers
+            there are three types of container (1)container-fluid (2)container (3) container-breakpoint(ex: container-xl,container-sm,etc..)-->
+        <h1>container-fluid</h1>
+    </div>
+
+    <div class="container" id="newback">
+        <!-- this will create some sidegap/margin across the container -->
+        <h2>container</h2>
+    </div>
+
+    <div class="container-lg" id="back">
+        <h2>Container-breakpoint</h2>
+    </div>
+
+    <!--
+              Extra small   Small   Medium  Large   X-Large  XX-Large
+                   576px   ≥576px  ≥768px  ≥992px  ≥1200px  ≥1400px
+    .container	    100%	540px	720px	960px	1140px	 1320px
+    .container-sm	100%	540px	720px	960px	1140px	 1320px
+    .container-md	100%	100%	720px	960px	1140px	 1320px
+    .container-lg	100%	100%	100%	960px	1140px	 1320px
+    .container-xl	100%	100%	100%	100%	1140px	 1320px
+    .container-xxl	100%	100%	100%	100%	100%	 1320px
+    .container-fluid	100%	100%	100%	100%	100%	100%
+    -->
+<br><br><br><hr>
+    <div class= "container-fluid" id="forcontainer">
+        <div class="row" id="forrow">
+            <div class="column" id="forcol">row
+                <div class="row" id="newrow">
+                    <div class="column" id="newcol">row2</div>
+            </div>
+            </div>
+        </div>
+        <!-- the height and width of the container & row will be the same. -->
+    </div>
+
+<!-- <pre>
+    x-small             0px - 575px        [col-*     ]
+    small               576px - 767px      [col-sm-*  ]
+    medium              768px - 991px      [col-md-*  ]
+    large               992px - 1199px     [col-lg-*  ]
+    extra large         1020px - 1399px    [col-xl-*  ]
+    extra extra large   1400px -infinite   [col-xxl-* ]
+    
+    * --- indicate no.of column.
+</pre>
+-->
+
+<br><br><br>
+
+    <div class="container-fluid" id="myimport">
+        <div id="myrow" class="row">
+            <div id="mycol" class="col-xxl-4">Hello world</div>
+            <div class="col-xxl-5"><img src="#" alt="image1"></div>
+            <div class="col-xxl-3" id="fornewcol"><img src="#" alt="image2"></div>
+        </div>
+    </div>
+
+<br><br><hr>
+
+    <div class="container-xl bg-dark" id="value">
+        <div class="row">
+            <div class="col-xl-6 col-md-3 col-lg-7 bg-primary" id="myval"><h1>Hello world !!!</h1></div>
+            <div class="col-xl-6 col-md-9 col-lg-5 bg-success" id="myval2"><h1>Once again decode this problem</h1>
+            <div class="row">
+                <div class="col-xl-8 col-md-6 col-lg-12 bg-info"><h2>2nd text line</h2></div>
+                <!-- This is know as nested column(column inside the column) -->
+            </div>
+        </div>
+            <!-- here we have provided the col-length according to the responsive size of the web page on electronic device  -->
+        </div>
+    </div>
+
+<br><br><hr>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col bg-info">page1</div>
+            <div class="col bg-secondary">page2</div> 
+            <div class="col bg-primary">page3</div>
+            <!-- This is a shortcut of bootstrap file where if we write the col in this manner then it will divide into equal parts. -->
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col bg-info">page1</div>
+            <div class="col-auto bg-secondary">page2</div> 
+            <div class="col bg-primary">page3</div>
+            <!-- This is a shortcut of bootstrap file where if we write the col-auto then size of the div-column will be according to the size of text and remaining column will divide the row into equal parts. -->
+        </div>
+<br><br><hr>
+        <div class="row">
+            <div class="col-auto bg-secondary">mera naam</div>
+            <div class="col-auto bg-success">mera kaam sabhi tarak ke coding skills ko badhana hai.</div>
+            <div class="col-auto bg-primary">mera daam</div>
+            <!-- here the size of the column will be according to the size of the text. -->
+        </div>
+<br><br><hr>
+        <div class="row row-cols-2">
+            <!-- yaha pe ham row class ki help se ye btayenge ki kitne columns ek line me aane chahiye.ye bhi ek shortcut hi hai bootstrap ka -->
+            <div class="col bg-secondary">mera naam</div>
+            <div class="col bg-success">mera kaam sabhi tarak ke coding skills ko badhana hai.</div>
+            <div class="col bg-primary">mera daam</div>
+            <div class="col bg-danger">sabhi ko namaste</div>
+            <!-- here the size of the column will be according to the size of the text. -->
+        </div>
+    </div>
+
+    <br><br><br>
+
+
+        <div class="row row-cols-auto">
+            <!-- yaha pe ham row class ki help se ye btayenge ki kitne columns ek line me aane chahiye par 'auto' use karne ke karan ye text ke according hi size lenge aur ye bhi ek shortcut hi hai bootstrap ka -->
+            <div class="col bg-secondary">mera naam</div>
+            <div class="col bg-success">mera kaam sabhi tarak ke coding skills ko badhana hai.</div>
+            <div class="col bg-primary">mera daam</div>
+            <div class="col bg-danger">sabhi ko namaste</div>
+            <!-- here the size of the column will be according to the size of the text. -->
+        </div>
+<br><hr>
+        <div class="row align-items-center bg-warning" style="height: 300px;">
+            <!-- yaha pe column ko flexbox ke properties ki help se align karne ki koshish kar rahe hai."align-items-end/start/center"  -->
+            <div class="col bg-secondary">mera naam</div>
+            <div class="col bg-success">mera kaam sabhi tarak ke coding skills ko badhana hai.</div>
+            <div class="col bg-primary">mera daam</div>
+            <div class="col bg-danger">sabhi ko namaste</div>
+            <!-- here the size of the column will be according to the size of the text. -->
+        </div>
+
+        <br><hr>
+        <div class="row bg-warning" style="height: 300px;">
+            <!-- yaha pe column ko flexbox ke properties ki help se align karne ki koshish kar rahe hai."align-self-end/start/center"  -->
+            <div class="col bg-secondary align-self-start">mera naam</div>
+            <div class="col bg-success align-self-center">mera kaam sabhi tarak ke coding skills ko badhana hai.</div>
+            <div class="col bg-primary align-self-end">mera daam</div>
+            <div class="col bg-danger">sabhi ko namaste</div>
+            <!-- here the size of the column will be according to the size of the text. -->
+        </div>
+
+        <br><hr>
+        <div class="row bg-warning justify-content-around" style="height: 300px;">
+            <!-- yaha pe column ko flexbox ke properties ki help se align karne ki koshish kar rahe hai."justify-content-end/start/center/between/around/evenly"  -->
+            <div class="col-3 bg-secondary "><img src="abhishek.png" height="240px" width="300px" alt="dell"></div>
+            <div class="col-3 bg-primary "><img src="/Web projects/Facebook clone/car.png" alt="hp"></div>
+            <div class="col-3 bg-danger"><img src="/Web projects/Facebook clone/new_mac.png" alt="macbook"></div>
+            <!-- here the size of the column will be according to the size of the text. -->
+        </div>
+
+    </div
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+  </body>
+</html>
